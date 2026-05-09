@@ -99,7 +99,7 @@ body {
   margin-bottom: 16px;
 }
 
-#nombre-destacado { color: var(--azul-claro); }
+#nombre-destacado { color: #fff; }
 
 .descripcion-hero {
   font-size: 1rem;
@@ -165,13 +165,13 @@ body {
 .numero-item strong {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--azul-claro);
+  color: #fff;
   min-width: 80px;
 }
 
 .numero-item span {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.8);
+  color: #fff;
 }
 
 /* ── TITULOS DE SECCION ── */
@@ -417,6 +417,63 @@ body.oscuro .aviso-exito {
 }
 
 .dato-item a:hover { text-decoration: underline; }
+
+/* ── DIRECTORIO TELEFONICO ── */
+.tabla-directorio {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--blanco);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.tabla-directorio thead {
+  background-color: var(--azul);
+  color: #fff;
+}
+
+.tabla-directorio thead th {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.tabla-directorio tbody tr {
+  border-bottom: 1px solid var(--borde);
+  transition: background-color 0.15s;
+}
+
+.tabla-directorio tbody tr:last-child { border-bottom: none; }
+
+.tabla-directorio tbody tr:hover { background-color: #EBF2FF; }
+
+.tabla-directorio tbody td {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.tabla-directorio tbody td:first-child {
+  color: var(--muted);
+  width: 40px;
+  text-align: center;
+}
+
+.tabla-directorio tbody td a {
+  color: var(--azul-medio);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tabla-directorio tbody td a:hover { text-decoration: underline; }
+
+body.oscuro .tabla-directorio { background-color: #222; }
+body.oscuro .tabla-directorio tbody tr:hover { background-color: #1A2A3A; }
+body.oscuro .tabla-directorio tbody td { color: var(--texto); }
+body.oscuro .tabla-directorio tbody tr { border-color: #333; }
 
 /* ── FOOTER ── */
 .pie-pagina {
