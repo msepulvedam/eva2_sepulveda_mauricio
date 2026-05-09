@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Municipalidad de Cholchol - Sitio oficial">
+  <title>Municipalidad de Cholchol</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVEGACION -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="barra-nav">
+      <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <img src="logo.jpg" alt="Logo Municipalidad de Cholchol" height="50" style="border-radius: 50%; object-fit: cover;">
+          Municipalidad de Cholchol
+        </a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+          <button class="btn btn-outline-light btn-sm ms-3" id="btn-tema">
+            Modo oscuro
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- SECCION INICIO / HERO -->
+  <main>
+    <section id="inicio" class="seccion-hero">
+      <div class="container py-5">
+        <div class="row align-items-center">
+
+          <div class="col-lg-8">
+            <p class="texto-region">Region de La Araucania, Chile</p>
+            <h1 class="titulo-principal">
+              Bienvenidos a la<br>
+              <span id="nombre-destacado">Municipalidad de Cholchol</span>
+            </h1>
+            <p class="descripcion-hero">
+              Trabajamos por el desarrollo y bienestar de todos los vecinos de Cholchol,
+              promoviendo la participacion ciudadana y la preservacion de nuestra cultura.
+            </p>
+            <div class="mt-4 d-flex gap-3 flex-wrap">
+              <a href="#servicios" class="btn btn-claro">Ver servicios</a>
+              <a href="#contacto" class="btn btn-transparente">Contactenos</a>
+            </div>
+          </div>
+
+          <!-- Numeros destacados -->
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="caja-numeros">
+              <article class="numero-item">
+                <strong id="num-habitantes">0</strong>
+                <span>Habitantes</span>
+              </article>
+              <article class="numero-item">
+                <strong id="num-servicios">0</strong>
+                <span>Servicios disponibles</span>
+              </article>
+              <article class="numero-item">
+                <strong id="num-proyectos">0</strong>
+                <span>Proyectos activos</span>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCION SERVICIOS -->
+    <section id="servicios" class="py-5">
+      <div class="container">
+
+        <h2 class="titulo-seccion text-center mb-2">Servicios Municipales</h2>
+        <p class="text-center text-muted mb-4">Accede a los servicios disponibles para los vecinos de Cholchol</p>
+
+        <!-- Filtros -->
+        <div class="text-center mb-4">
+          <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+          <button class="btn-filtro" data-categoria="tramites">Tramites</button>
+          <button class="btn-filtro" data-categoria="social">Social</button>
+          <button class="btn-filtro" data-categoria="obras">Obras</button>
+        </div>
+
+        <!-- Tarjetas de servicios -->
+        <div class="row g-4" id="lista-servicios">
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="tramites">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">📄</div>
+              <h3>Certificados</h3>
+              <p>Obtén certificados de residencia, nacimiento y otros documentos.</p>
+              <span class="etiqueta">Tramites</span>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="social">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">❤️</div>
+              <h3>Ayuda Social</h3>
+              <p>Programas de apoyo a familias vulnerables y adultos mayores.</p>
+              <span class="etiqueta">Social</span>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="obras">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">🏗️</div>
+              <h3>Permisos de Obra</h3>
+              <p>Solicita permisos de construccion y pavimentacion.</p>
+              <span class="etiqueta">Obras</span>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="tramites">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">🚗</div>
+              <h3>Patentes y Licencias</h3>
+              <p>Renueva tu patente comercial o licencia de conducir.</p>
+              <span class="etiqueta">Tramites</span>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="social">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">📚</div>
+              <h3>Educacion y Cultura</h3>
+              <p>Talleres culturales y programas educativos para la comunidad.</p>
+              <span class="etiqueta">Social</span>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 item-servicio" data-categoria="obras">
+            <article class="tarjeta-servicio" tabindex="0">
+              <div class="icono-servicio">🌿</div>
+              <h3>Medio Ambiente</h3>
+              <p>Programas de reciclaje y cuidado de areas verdes.</p>
+              <span class="etiqueta">Obras</span>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCION NOTICIAS -->
+    <section id="noticias" class="py-5 fondo-gris">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+          <div>
+            <h2 class="titulo-seccion mb-1">Noticias</h2>
+            <p class="text-muted mb-0">Ultimas novedades de la municipalidad</p>
+          </div>
+          <button class="btn btn-principal" id="btn-nueva-noticia">
+            + Agregar noticia
+          </button>
+        </div>
+
+        <div class="row g-4" id="contenedor-noticias">
+
+          <div class="col-md-4">
+            <article class="tarjeta-noticia">
+              <div class="imagen-noticia img-azul" role="img" aria-label="Proyecto vial"></div>
+              <div class="p-3">
+                <small class="texto-fecha">15 Abril 2024</small>
+                <h3 class="titulo-noticia">Nuevo proyecto vial en Cholchol</h3>
+                <p class="text-muted small">El municipio anuncia la pavimentacion de cinco calles principales.</p>
+                <button class="btn btn-sm btn-ver-mas"
+                  data-info="Se pavimentaran Av. Principal, calle Los Robles, calle Mapuche, calle Las Araucarias y calle El Bosque durante el segundo semestre.">
+                  Ver mas
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="tarjeta-noticia">
+              <div class="imagen-noticia img-verde" role="img" aria-label="Programa social"></div>
+              <div class="p-3">
+                <small class="texto-fecha">10 Abril 2024</small>
+                <h3 class="titulo-noticia">Apoyo a adultos mayores</h3>
+                <p class="text-muted small">Se lanza programa de visitas domiciliarias para adultos mayores.</p>
+                <button class="btn btn-sm btn-ver-mas"
+                  data-info="El programa contempla visitas semanales, asistencia basica de salud y acompanamiento emocional para adultos mayores solos.">
+                  Ver mas
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4">
+            <article class="tarjeta-noticia">
+              <div class="imagen-noticia img-cafe" role="img" aria-label="Festival cultura"></div>
+              <div class="p-3">
+                <small class="texto-fecha">5 Abril 2024</small>
+                <h3 class="titulo-noticia">Festival de cultura mapuche</h3>
+                <p class="text-muted small">El municipio organiza el festival anual de cultura mapuche.</p>
+                <button class="btn btn-sm btn-ver-mas"
+                  data-info="El festival incluye danza tradicional, artesania, gastronomia tipica y exposiciones sobre la historia mapuche de la region.">
+                  Ver mas
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+
+        <h2 class="titulo-seccion text-center mb-2">Contacto</h2>
+        <p class="text-center text-muted mb-5">Envianos tu consulta y te responderemos pronto</p>
+
+        <div class="row justify-content-center g-5">
+
+          <!-- Datos -->
+          <div class="col-lg-4">
+            <address class="datos-contacto">
+              <div class="dato-item">
+                <strong>Direccion</strong>
+                <p>Av. Arturo Prat 001, Cholchol<br>Region de La Araucania</p>
+              </div>
+              <div class="dato-item">
+                <strong>Telefono</strong>
+                <p><a href="tel:+56452752000">+56 45 275 2000</a></p>
+              </div>
+              <div class="dato-item">
+                <strong>Correo</strong>
+                <p><a href="mailto:contacto@municholchol.cl">contacto@municholchol.cl</a></p>
+              </div>
+              <div class="dato-item">
+                <strong>Horario</strong>
+                <p>Lunes a Viernes<br>08:30 a 14:00 hrs</p>
+              </div>
+            </address>
+          </div>
+
+          <!-- Formulario -->
+          <div class="col-lg-6">
+            <form id="mi-formulario" class="caja-formulario p-4" novalidate>
+
+              <div class="mb-3">
+                <label for="inp-nombre" class="form-label">Nombre completo *</label>
+                <input type="text" id="inp-nombre" class="form-control" placeholder="Juan Perez">
+                <div class="error-campo" id="err-nombre"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="inp-correo" class="form-label">Correo electronico *</label>
+                <input type="email" id="inp-correo" class="form-control" placeholder="juan@correo.com">
+                <div class="error-campo" id="err-correo"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="inp-mensaje" class="form-label">Mensaje *</label>
+                <textarea id="inp-mensaje" class="form-control" rows="4" placeholder="Escriba su consulta..."></textarea>
+                <div class="d-flex justify-content-between">
+                  <div class="error-campo" id="err-mensaje"></div>
+                  <small id="cuenta-chars" class="text-muted">0 / 500</small>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-principal w-100">Enviar mensaje</button>
+
+              <div id="aviso-ok" class="aviso-exito mt-3" style="display:none">
+                Mensaje enviado correctamente. Nos contactaremos pronto.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="pie-pagina py-3">
+    <div class="container text-center">
+      <p class="mb-0">Municipalidad de Cholchol &mdash; Region de La Araucania</p>
+      <small>© 2024 Todos los derechos reservados</small>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
