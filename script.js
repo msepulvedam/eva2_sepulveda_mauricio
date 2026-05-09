@@ -99,58 +99,6 @@ function activarBotonesNoticias() {
 }
 
 
-// ── EVENTO 4: AGREGAR NOTICIA ────────────────
-// Click en el boton agrega una nueva tarjeta al DOM
-
-var numNoticias = 0;
-
-document.getElementById('btn-nueva-noticia').addEventListener('click', function () {
-  numNoticias++;
-
-  var hoy = new Date();
-  var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-  var fechaTexto = hoy.getDate() + ' ' + meses[hoy.getMonth()] + ' ' + hoy.getFullYear();
-
-  // Crear nueva columna con la noticia
-  var columna = document.createElement('div');
-  columna.className = 'col-md-4 noticia-nueva';
-
-  columna.innerHTML =
-    '<article class="tarjeta-noticia">' +
-      '<div class="imagen-noticia img-azul" role="img" aria-label="Nueva noticia"></div>' +
-      '<div class="p-3">' +
-        '<small class="texto-fecha">' + fechaTexto + '</small>' +
-        '<h3 class="titulo-noticia">Noticia #' + numNoticias + '</h3>' +
-        '<p class="text-muted small">Actualizacion de actividades municipales para la comunidad de Cholchol.</p>' +
-        '<button class="btn btn-sm btn-ver-mas nueva-btn" ' +
-          'data-info="Informacion detallada de la noticia ' + numNoticias + ' agregada dinamicamente.">' +
-          'Ver mas' +
-        '</button>' +
-      '</div>' +
-    '</article>';
-
-  document.getElementById('contenedor-noticias').appendChild(columna);
-
-  // Activar el boton de la noticia nueva
-  columna.querySelector('.nueva-btn').addEventListener('click', function () {
-    var info = this.dataset.info;
-    var contenedor = this.parentElement;
-    var detalle = contenedor.querySelector('.detalle-noticia');
-
-    if (detalle) {
-      detalle.remove();
-      this.textContent = 'Ver mas';
-    } else {
-      var nuevoDetalle = document.createElement('p');
-      nuevoDetalle.className = 'detalle-noticia';
-      nuevoDetalle.textContent = info;
-      contenedor.insertBefore(nuevoDetalle, this.nextSibling);
-      this.textContent = 'Cerrar';
-    }
-  });
-
-  console.log('Noticia #' + numNoticias + ' agregada.');
-});
 
 
 // ── EVENTO 5: FORMULARIO CON VALIDACIONES ────
